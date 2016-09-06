@@ -56,6 +56,19 @@ Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/
 
 Consider warnings to be errors. This rule informs many stylistic decisions such as not to use the `++` or `--` operators, C-style for loops, or strings as selectors.
 
+**Preferred:**
+
+```swift
+number += 1
+number -= 1
+
+// for loop
+for i in 0...count {
+    // White code here...
+}
+```
+
+
 ## Naming
 
 Use descriptive names with camel case for classes, methods, variables, etc. Type names (classes, structures, enumerations and protocols) should be capitalized, while method names and variables should start with a lower case letter.
@@ -168,12 +181,14 @@ Selectors are Obj-C methods that act as handlers for many Cocoa and Cocoa Touch 
 
 **Preferred:**
 ```swift
-let sel = #selector(viewDidLoad)
+let sel = #selector(self.viewDidLoad)
+let sel = #selector(self.viewDidLoad(_:))
 ```
 
 **Not Preferred:**
 ```swift
 let sel = #selector(ViewController.viewDidLoad)
+let sel = #selector(ViewController.viewDidLoad(_:))
 ```
 
 ### Generics
@@ -284,7 +299,7 @@ Keep imports minimal. For example, don't import `UIKit` when importing `Foundati
 * Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. Be sure to set this preference in Xcode and in the Project settings as shown below:
 
   ![Xcode indent settings](screens/indentation.png)
-  
+
   ![Xcode Project settings](screens/project_settings.png)
 
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
@@ -407,7 +422,7 @@ class BoardLocation {
   init(row: Int, column: Int) {
     self.row = row
     self.column = column
-    
+
     let closure = {
       print(self.row)
     }
@@ -442,7 +457,7 @@ Mark classes `final` when inheritance is not intended. Example:
 ```swift
 // Turn any generic type into a reference type using this Box class.
 final class Box<T> {
-  let value: T 
+  let value: T
   init(_ value: T) {
     self.value = value
   }
@@ -840,9 +855,9 @@ func computeFFT(context: Context?, inputData: InputData?) throws -> Frequencies 
 
   guard let context = context else { throw FFTError.noContext }
   guard let inputData = inputData else { throw FFTError.noInputData }
-    
+
   // use context and input to compute the frequencies
-    
+
   return frequencies
 }
 ```
@@ -981,7 +996,7 @@ Smiley faces are a very prominent style feature of the raywenderlich.com site! I
 ## Credits
 
 [Ray Fix](https://github.com/rayfix) currently maintains this style guide.
-It is a collaborative effort from the most stylish raywenderlich.com team members and its community: 
+It is a collaborative effort from the most stylish raywenderlich.com team members and its community:
 
 * [Jawwad Ahmad](https://github.com/jawwad)
 * [Soheil Moayedi Azarpour](https://github.com/moayes)
