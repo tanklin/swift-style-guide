@@ -1,10 +1,12 @@
 # The Taiwan Bigdata Inc. Swift Style Guide.
 
+<!--
 This style guide is different from others you may see, because the focus is centered on readability for print and the web. We created this style guide to keep the code in our books, tutorials, and starter kits nice and consistent — even though we have many different authors working on the books.
 
 Our overarching goals are conciseness, readability, and simplicity.
 
-<!-- Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide) too. -->
+Writing Objective-C? Check out our [Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide) too.
+-->
 
 > This Swift Style Guide is forked from [raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide)
 
